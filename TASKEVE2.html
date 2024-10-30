@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #output {
+        width: 700px;
+        height: 200px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+<body>
+    <div id="output" bis_skin_checked="1">
+        <div class="divForlorem">
+            <p class="lorem">Аутсайдер
+                Тренер молодіжної бейсбольної команди, викладач англійської, чоловік та батько двох доньок. 
+                Усе це про Террі. Так, про таких кажуть «класний чувак», 
+                з таким усі хочуть дружити і такому не бояться позичити грошей. Так, Террі крутий. А ще — убивця</p>
+        </div>
+        <div class="divForlorem">
+            <p class="lorem">Мертва зона
+                Коли через майже п’ять років Джон Сміт вийшов з коми, він, певно, пожалкував про це.
+                За цей час тіло стало майже чужим, його дівчина обрала іншого, а рідна мати втратила зв’язок з реальністю</p>
+        </div>
+        <div class="divForlorem">
+            <p class="lorem">Згодом
+                Джеймі — в усьому звичайний хлопчик зі звичайної неповної сім’ї, крім одного. 
+                Він бачить мертвих і може розмовляти з ними. До того ж покійники мусять завжди чесно відповідати на його запитання</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let button = document.querySelector("button")
+    let divs = document.querySelectorAll(".lorem")
+    let currentI = 0
+    function click(e) {
+        divs.forEach(div => {
+            div.style.background = "";
+        });
+        e.currentTarget.style.background = "orange"
+    }
+    divs.forEach(div => {
+        div.addEventListener("click", click)
+
+    })
+</script>
